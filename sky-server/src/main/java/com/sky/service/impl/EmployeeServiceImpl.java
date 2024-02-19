@@ -76,7 +76,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         Employee employee = employeeMapper.getByUsername(username);
 
         if (!ObjectUtils.isEmpty(employee)){
-            throw new UserAlreadyExitsException("用户" + username + "已存在");
+            throw new UserAlreadyExitsException(username + MessageConstant.ALREADY_EXITS);
         }else {
             employee = new Employee();
         }
