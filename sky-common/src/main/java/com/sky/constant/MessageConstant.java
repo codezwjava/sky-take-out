@@ -23,7 +23,7 @@ public class MessageConstant {
     public static final String DISH_BE_RELATED_BY_SETMEAL = "当前菜品关联了套餐,不能删除";
     public static final String ORDER_STATUS_ERROR = "订单状态错误";
     public static final String ORDER_NOT_FOUND = "订单不存在";
-
     public static final String ALREADY_EXITS = "用户已存在";
-
+    public static String EditPasswordFail1 = "原始密码与新密码一致，请重新输入";
+    public static String EditPasswordFail2 = "原始密码不一致，请重新输入";
 }
