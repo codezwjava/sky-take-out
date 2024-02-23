@@ -47,4 +47,17 @@ public class DishController {
 
         return Result.success();
     }
+
+    @GetMapping("/{id}")
+    public Result<DishVO> findById(@PathVariable Long id){
+        DishVO dishVO = dishService.findByIdWithFlavor(id);
+        return Result.success(dishVO);
+    }
+
+    @PutMapping
+    public Result update(@RequestBody DishDTO dishDTO){
+        log.info("修改菜品 {}", dishDTO);
+        dishService.updateWithFlavor(dishDTO);
+        return Result.success();
+    }
 }
